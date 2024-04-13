@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class Attack : MonoBehaviour
 {
@@ -23,7 +21,7 @@ public class Attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.time >= nextAttackTime)
+        if (Time.time >= nextAttackTime)
         {
             if (input.PlayerAttacked())
             {
@@ -41,11 +39,7 @@ public class Attack : MonoBehaviour
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AttackPoint.position, Range, Enemy);
         foreach (Collider2D enemy in hitEnemies)
         {
-            if(enemy == null)
-            {
-                return;
-            }
-            enemy.GetComponent<enemy>().TakeDamage(damage); 
+            enemy.GetComponent<enemy>().TakeDamage(damage);
         }
     }
 

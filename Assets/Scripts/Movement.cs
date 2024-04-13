@@ -19,6 +19,7 @@ public class Movement : MonoBehaviour
     float groundRemeber;
     float groundRemeberTime = 0.2f;
     public Animator animator;
+    bool isFacingRight = true;
 
     // Start is called before the first frame update
 
@@ -46,13 +47,16 @@ public class Movement : MonoBehaviour
         }
         if(!grounded)
         {
+            animator.SetBool("Jump", true);
             multiplier = 0.75f;
         }
-
     }
-    private bool InRange()
+    private void Flip()
     {
-        return Physics2D.OverlapCircle(InRangeCheck.position, 0.25f, Ground);
+        isFacingRight = !isFacingRight;
+        Vector3 localScale = transform.localScale;
+        localScale.x *= -1f;
+        transform.localScale = localScale;
     }
 
     // Update is called once per frame
@@ -75,11 +79,19 @@ public class Movement : MonoBehaviour
         {
             rb.drag = 1;
         }
+
+        if (!isFacingRight && move.x > 0f)
+        {
+            Flip();
+        }
+        else if (isFacingRight && move.x < 0f)
+        {
+            Flip();
+        }
     }
 
     void Jump()
     {
-        animator.SetBool("Jump", true);
         jumpRemeber -= Time.deltaTime;
         if (input.PlayerJumped())
         {

@@ -6,6 +6,8 @@ public class enemy : MonoBehaviour
 {
     public int MaxHealth = 100;
     int health;
+    public Summons summon;
+    public Transform SummonVarient;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,19 @@ public class enemy : MonoBehaviour
 
     void Die()
     {
-        Destroy(gameObject);
+        if (summon.pendingAdd != null)
+        {
+            return;
+        }
+        else
+        {
+            if(SummonVarient == null)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            summon.pendingAdd = SummonVarient.transform;
+        }
+           Destroy(gameObject);
     }
 }
