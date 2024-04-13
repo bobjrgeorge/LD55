@@ -31,6 +31,7 @@ public class Movement : MonoBehaviour
     }
     private void Update()
     {
+        rb.AddForce(-orientation.up * 800 * Time.deltaTime);
         grounded = Physics2D.OverlapCircle(Groundcheck.position, 0.2f, Ground);
         Jump();
 
@@ -42,7 +43,7 @@ public class Movement : MonoBehaviour
         }
         if(!grounded)
         {
-            multiplier = 0.5f;
+            multiplier = 0.75f;
         }
 
     }
@@ -61,7 +62,7 @@ public class Movement : MonoBehaviour
     {
         Vector2 movement = input.GetPlayerMovement();
         move.Set(movement.x, 0, movement.y);
-        rb.AddForce(orientation.right * move.x * speed * multiplier * Time.deltaTime );
+        rb.velocity = new Vector2(move.x * speed * multiplier * Time.deltaTime, rb.velocity.y);
         if (move.x == 0 && grounded)
         {
             rb.drag = 6.54678294387f;
@@ -69,11 +70,6 @@ public class Movement : MonoBehaviour
         else
         {
             rb.drag = 1;
-        }
-        if(rb.velocity.x >= 5)
-        {
-            float cappedVel = rb.velocity.x;
-            cappedVel = 5;
         }
     }
 
