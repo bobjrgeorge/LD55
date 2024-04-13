@@ -18,6 +18,8 @@ public class Movement : MonoBehaviour
     float jumpRemeber = 0;
     float groundRemeber;
     float groundRemeberTime = 0.2f;
+    public Animator animator;
+
     // Start is called before the first frame update
 
     private void Awake()
@@ -40,6 +42,7 @@ public class Movement : MonoBehaviour
         {
             groundRemeber = groundRemeberTime;
             multiplier = 1f;
+            animator.SetBool("Jump", false);
         }
         if(!grounded)
         {
@@ -63,6 +66,7 @@ public class Movement : MonoBehaviour
         Vector2 movement = input.GetPlayerMovement();
         move.Set(movement.x, 0, movement.y);
         rb.velocity = new Vector2(move.x * speed * multiplier * Time.deltaTime, rb.velocity.y);
+        animator.SetFloat("Speed", Mathf.Abs(move.x));
         if (move.x == 0 && grounded)
         {
             rb.drag = 6.54678294387f;
@@ -75,6 +79,7 @@ public class Movement : MonoBehaviour
 
     void Jump()
     {
+        animator.SetBool("Jump", true);
         jumpRemeber -= Time.deltaTime;
         if (input.PlayerJumped())
         {

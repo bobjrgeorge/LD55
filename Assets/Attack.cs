@@ -12,6 +12,8 @@ public class Attack : MonoBehaviour
     public int damage;
     public float attackRate = 2;
     float nextAttackTime = 0;
+    public Animator animator;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -27,6 +29,7 @@ public class Attack : MonoBehaviour
             {
                 PlayerAttack();
                 nextAttackTime = Time.time + 1 / attackRate;
+                animator.SetTrigger("Attack");
             }
                 
         }
