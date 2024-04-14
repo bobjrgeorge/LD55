@@ -1,4 +1,4 @@
-
+using System.Collections;
 using UnityEngine;
  
 public class Attack : MonoBehaviour
@@ -11,23 +11,19 @@ public class Attack : MonoBehaviour
     public float attackRate = 2;
     float nextAttackTime = 0;
     public Animator animator;
+    public float AnimationTime;
+    bool running;
 
     // Start is called before the first frame update
 
     // Update is called once per frame
     void Update()
     {
-        if (Time.time >= nextAttackTime)
-        {
-            if (input.PlayerAttacked())
-            {
-                PlayerAttack();
-                nextAttackTime = Time.time + 1 / attackRate;
-                animator.SetTrigger("Attack");
-            }
-                
-        }
-        
+         if (input.PlayerAttacked() && !running)
+         {
+            running = true;
+            StartCoroutine(AnimTime());
+         }    
     }
 
     void PlayerAttack()
@@ -37,6 +33,19 @@ public class Attack : MonoBehaviour
         {
             enemy.GetComponent<enemy>().TakeDamage(damage);
         }
+    }
+
+
+    IEnumerator AnimTime()
+    {
+        animator.SetTrigger("Attack");
+        yield return new WaitForSeconds(AnimationTime);
+        if (Time.time >= nextAttackTime)
+        {
+            PlayerAttack();
+            nextAttackTime = Time.time + 1 / attackRate;
+        }
+        running = false;
     }
 
     private void OnDrawGizmos()

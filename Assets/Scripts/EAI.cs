@@ -1,5 +1,6 @@
 using UnityEngine;
-using Pathfinding; 
+using Pathfinding;
+using System.Collections;
 
 public class EAI : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class EAI : MonoBehaviour
     public int Playerdamage;
     public Animator anim;
     public float AnimationTime;
+    bool attacking;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,9 @@ public class EAI : MonoBehaviour
         Startpos = new Vector2(transform.position.x, transform.position.y);
         
     }
+    private void Update()
+    {
+    }
     //float to set timer for end of animation so I can take damage after the anim
     private void FixedUpdate()
     {
@@ -46,7 +51,9 @@ public class EAI : MonoBehaviour
         InSightRange = Physics2D.OverlapCircle(transform.position, sightRange, Player);
 
         if (InAttackRange && InSightRange) {
+
             Attack();
+            attacking = true;
         }
         if(InSightRange && !InAttackRange) { 
             Chase();
@@ -70,13 +77,7 @@ public class EAI : MonoBehaviour
 
     void Attack()
     {
-        if (Time.time >= nextAttackTime)
-        {
-            Damage();
-            nextAttackTime = Time.time + 1 / attackRate;
-        }
-        rb.velocity = Vector3.zero;
-        anim.SetBool("Attack", true);
+        StartCoroutine(AnimTime());
     }
     void Damage()
     {
@@ -89,6 +90,11 @@ public class EAI : MonoBehaviour
 
     void Chase()
     {
+        if(attacking)
+        {
+            rb.velocity = Vector3.zero;
+            return;
+        }
         MovementLogic();
     }
     void UpdatePath()
@@ -161,5 +167,20 @@ public class EAI : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRange);
         Gizmos.DrawWireSphere(Startpos, 1f);
         Gizmos.DrawWireSphere(Startpos, DeBug);
+    }
+
+    IEnumerator AnimTime()
+    {
+        anim.SetBool("Attack", true);
+        yield return new WaitForSeconds(AnimationTime);
+        if (Time.time >= nextAttackTime)
+        {
+            Debug.Log("hit");
+            Damage();
+            nextAttackTime = Time.time + 1 / attackRate;
+            attacking = false;
+            anim.SetBool("Attack", false);
+        }
+        rb.velocity = Vector3.zero;
     }
 }
