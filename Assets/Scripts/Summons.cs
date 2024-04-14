@@ -6,16 +6,12 @@ public class Summons : MonoBehaviour
 {
     public List<Transform> AvalibleSummons;
     public Transform pendingAdd;
-    private InputSystem input;
+    public InputSystem input;
     public bool SummonOne;
     public bool SummonTwo;
     public bool canReset = true;
 
     //public enemy S_Enemy;
-    void Start()
-    {
-        input = InputSystem.Instance;
-    }
 
     // Update is called once per frame
     void Update()

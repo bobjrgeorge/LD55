@@ -12587,6 +12587,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   pendingAdd: {fileID: 0}
+  input: {fileID: 902514251}
   SummonOne: 0
   SummonTwo: 0
   canReset: 0
@@ -24857,6 +24858,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  input: {fileID: 902514251}
   Player:
     serializedVersion: 2
     m_Bits: 256
@@ -25441,9 +25443,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 662336574942894270, guid: 7489e47463dfb5448ab0ba9151687fd1, type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: 902514251}
+    - target: {fileID: 662336574942894270, guid: 7489e47463dfb5448ab0ba9151687fd1, type: 3}
       propertyPath: speed
       value: 250
       objectReference: {fileID: 0}
+    - target: {fileID: 1090621412737628700, guid: 7489e47463dfb5448ab0ba9151687fd1, type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: 902514251}
     - target: {fileID: 1250763017442119982, guid: 7489e47463dfb5448ab0ba9151687fd1, type: 3}
       propertyPath: m_RootOrder
       value: 9

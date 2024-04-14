@@ -5,17 +5,12 @@ using UnityEngine;
 public class Interactable2 : MonoBehaviour
 {
     public Dialogue2 dialogue;
-    private InputSystem input;
+    public InputSystem input;
     public LayerMask Player;
     bool canStart = true;
     public float raduis;
 
     public bool hasStarted = false;
-
-    private void Awake()
-    {
-        input = InputSystem.Instance;
-    }
 
     private void Update()
     {

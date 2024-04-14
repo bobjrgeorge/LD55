@@ -28,6 +28,7 @@ public class EAI : MonoBehaviour
     public float DeBug;
     public int Playerdamage;
     public Animator anim;
+    public float AnimationTime;
 
     // Start is called before the first frame update
     void Start()

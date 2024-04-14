@@ -3091,9 +3091,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 897878954}
+  - component: {fileID: 897878957}
   - component: {fileID: 897878953}
   - component: {fileID: 897878956}
-  - component: {fileID: 897878957}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3129,7 +3129,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &897878956
 MonoBehaviour:
@@ -9051,6 +9051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e550d5458dc479340a74d51deda40878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  input: {fileID: 897878957}
   Player:
     serializedVersion: 2
     m_Bits: 256
@@ -9404,7 +9405,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1528130277
 MonoBehaviour:
@@ -9420,7 +9421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACAn+sMz43FXAIAABcFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMtu2zAQ/BWD5yaQHCOpe2sVx+nBiRG3yEUXmlxZhClS4MOPBP73LinJUlRfTM3MLmcf0icRytbAnDZLI/hKcyA/JiScybdJTz7Die602ogP6DTvgrsyiGjUvFEnNOJpCLO6AmcE+6l2MogTBL0ShTbVgu8g09ZZhAsqLSBltAvRCqHPCTnh3808hJzxNH0Ipw88zZPJBY8MlAPTS2e38/hr9Z26EXvFJK1q4MF5HzP93qrTRqawplYR/DMtpbCtIeLOdSw4o7X1WA4KuKBYYHQR9CWIXelC3mHwa1FYcK0lQ8+PwmCfmqzkl26aV1G7b3wdqPRwNd6kXP3H3qSRLoyunrtb0yTc4ErB9m/0zKh1g94O4cevtr06UrmnWwnvJagXvTTaK46kMz6EegvTx/7xWlhWAtv3eGN1BPq673YyGk2o4RJrP2VSVNtA3c4aYCN17HacPxicy280HLfDtikQDS7+WvhDd8M1aoknYaxDqq1SBXtb7U2QkkXsWajGu0wbBRFuTdegqHTnNaZx4wGOuMG1I+aJhhemvbzluvdgFBLhXp8kI2qtj9dh2VIfV2DLV++kUNCbDsQL9inTSjX7NexJF7bxpqBsELbzgn9dLTJN07v0Yc74/d2sSNjdTVIk23tIZqyYAb2fURJ3Tyisk8p1Y7RtD05N9ckV7ln3HZksDa3jrnNDj0vxUelBy4Uq9IYZAPXaZLgaB4OX4DvJF1xggzbgnFBx3uQzJ1KzPfD8miiPlS5OztC8z5KTWhy0C0hOsvjhyEmAr7u8NnAQcAyXd8ku5PIPUEsDBBQAAAgIAACAn+vnb6w0bQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrSSkaGhsaG5ZXKKmbFJmkGysa5BmkGSWaqBSXKaSWqimUmiUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACAn+sMz43FXAIAABcFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACAn+vnb6w0bQAAAHgAAAAJACQAAAAAAAAAAAAAAKkCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAYQMAAAAA
+    dataString: UEsDBBQAAAgIAACYn+sMz43FXAIAABcFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMtu2zAQ/BWD5yaQHCOpe2sVx+nBiRG3yEUXmlxZhClS4MOPBP73LinJUlRfTM3MLmcf0icRytbAnDZLI/hKcyA/JiScybdJTz7Die602ogP6DTvgrsyiGjUvFEnNOJpCLO6AmcE+6l2MogTBL0ShTbVgu8g09ZZhAsqLSBltAvRCqHPCTnh3808hJzxNH0Ipw88zZPJBY8MlAPTS2e38/hr9Z26EXvFJK1q4MF5HzP93qrTRqawplYR/DMtpbCtIeLOdSw4o7X1WA4KuKBYYHQR9CWIXelC3mHwa1FYcK0lQ8+PwmCfmqzkl26aV1G7b3wdqPRwNd6kXP3H3qSRLoyunrtb0yTc4ErB9m/0zKh1g94O4cevtr06UrmnWwnvJagXvTTaK46kMz6EegvTx/7xWlhWAtv3eGN1BPq673YyGk2o4RJrP2VSVNtA3c4aYCN17HacPxicy280HLfDtikQDS7+WvhDd8M1aoknYaxDqq1SBXtb7U2QkkXsWajGu0wbBRFuTdegqHTnNaZx4wGOuMG1I+aJhhemvbzluvdgFBLhXp8kI2qtj9dh2VIfV2DLV++kUNCbDsQL9inTSjX7NexJF7bxpqBsELbzgn9dLTJN07v0Yc74/d2sSNjdTVIk23tIZqyYAb2fURJ3Tyisk8p1Y7RtD05N9ckV7ln3HZksDa3jrnNDj0vxUelBy4Uq9IYZAPXaZLgaB4OX4DvJF1xggzbgnFBx3uQzJ1KzPfD8miiPlS5OztC8z5KTWhy0C0hOsvjhyEmAr7u8NnAQcAyXd8ku5PIPUEsDBBQAAAgIAACYn+vnb6w0bQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrSSkaGhsaG5ZXKKmbFJmkGysa5BmkGSWaqBSXKaSWqimUmiUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACYn+sMz43FXAIAABcFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACYn+vnb6w0bQAAAHgAAAAJACQAAAAAAAAAAAAAAKkCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAYQMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -10899,6 +10900,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  input: {fileID: 897878957}
   Player:
     serializedVersion: 2
     m_Bits: 256
@@ -21039,9 +21041,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 662336574942894270, guid: 7489e47463dfb5448ab0ba9151687fd1, type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: 897878957}
+    - target: {fileID: 662336574942894270, guid: 7489e47463dfb5448ab0ba9151687fd1, type: 3}
       propertyPath: speed
       value: 250
       objectReference: {fileID: 0}
+    - target: {fileID: 1090621412737628700, guid: 7489e47463dfb5448ab0ba9151687fd1, type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: 897878957}
     - target: {fileID: 1250763017442119982, guid: 7489e47463dfb5448ab0ba9151687fd1, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -21220,6 +21230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AvalibleSummons: []
   pendingAdd: {fileID: 0}
+  input: {fileID: 897878957}
   SummonOne: 0
   SummonTwo: 0
   canReset: 1

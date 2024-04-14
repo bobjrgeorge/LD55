@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
     public float speed;
     float multiplier;
     private Vector3 move;
-    private InputSystem input;
+    public InputSystem input;
     public Transform orientation;
     public Transform Groundcheck;
     public LayerMask Ground;
@@ -25,7 +25,6 @@ public class Movement : MonoBehaviour
 
     private void Awake()
     {
-        input = InputSystem.Instance;
         Cursor.lockState = CursorLockMode.Locked;
     }
     void Start()

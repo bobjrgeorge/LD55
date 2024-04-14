@@ -3,7 +3,7 @@ using UnityEngine;
  
 public class Attack : MonoBehaviour
 {
-    private InputSystem input;
+    public InputSystem input;
     public Transform AttackPoint;
     public float Range;
     public LayerMask Enemy;
@@ -13,10 +13,6 @@ public class Attack : MonoBehaviour
     public Animator animator;
 
     // Start is called before the first frame update
-    private void Awake()
-    {
-        input = InputSystem.Instance;
-    }
 
     // Update is called once per frame
     void Update()
