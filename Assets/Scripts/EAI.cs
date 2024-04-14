@@ -84,7 +84,16 @@ public class EAI : MonoBehaviour
         Collider2D[] HitPlayer = Physics2D.OverlapCircleAll(transform.position, attackRange, Player);
         foreach (Collider2D PlayerHealth in HitPlayer)
         {
-            PlayerHealth.GetComponent<PlayerHealth>().TakeDamage(Playerdamage);
+            if(PlayerHealth.GetComponent<PlayerHealth>() != null)
+            {
+                PlayerHealth.GetComponent<PlayerHealth>().TakeDamage(Playerdamage);
+            }
+        }
+
+        Collider2D[] HitAlly = Physics2D.OverlapCircleAll(transform.position, attackRange, Player);
+        foreach (Collider2D Ally in HitAlly)
+        {
+            Ally.GetComponent<Ally>().TakeDamage(Playerdamage);
         }
     }
 
