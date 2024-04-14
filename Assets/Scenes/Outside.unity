@@ -1291,7 +1291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 1
-  summon: {fileID: 0}
+  summon: {fileID: 947681895}
   SummonVarient: {fileID: 1631881059178814367, guid: 6051d0eb899817f488c28482f2b36b6e, type: 3}
 --- !u!212 &648655670
 SpriteRenderer:
@@ -1389,8 +1389,10 @@ MonoBehaviour:
   DeBug: 0
   Enemies: []
   ID: 
-  summon: {fileID: 947681895}
-  SummonSorter: []
+  summons: {fileID: 947681895}
+  SummonSorter:
+  - {fileID: 648655668}
+  health: 0
 --- !u!1 &744452488
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,6 +1726,9 @@ MonoBehaviour:
   - {fileID: 648655671}
   - {fileID: 1670919324}
   pendingAdd: {fileID: 0}
+  SummonOne: 0
+  SummonTwo: 0
+  canReset: 0
 --- !u!1 &1217981506
 GameObject:
   m_ObjectHideFlags: 0
@@ -2447,7 +2452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 100
-  summon: {fileID: 0}
+  summon: {fileID: 947681895}
   SummonVarient: {fileID: 0}
 --- !u!212 &1670919323
 SpriteRenderer:
@@ -2545,8 +2550,10 @@ MonoBehaviour:
   DeBug: 0
   Enemies: []
   ID: 
-  summon: {fileID: 947681895}
-  SummonSorter: []
+  summons: {fileID: 947681895}
+  SummonSorter:
+  - {fileID: 1670919320}
+  health: 0
 --- !u!1 &1721068451
 GameObject:
   m_ObjectHideFlags: 0
