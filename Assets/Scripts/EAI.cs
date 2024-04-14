@@ -27,6 +27,7 @@ public class EAI : MonoBehaviour
     Vector3 Startpos;
     public float DeBug;
     public int Playerdamage;
+    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,7 @@ public class EAI : MonoBehaviour
         Startpos = new Vector2(transform.position.x, transform.position.y);
         
     }
+    //float to set timer for end of animation so I can take damage after the anim
     private void FixedUpdate()
     {
         InAttackRange = Physics2D.OverlapCircle(transform.position, attackRange, Player);
@@ -46,7 +48,8 @@ public class EAI : MonoBehaviour
             Attack();
         }
         if(InSightRange && !InAttackRange) { 
-            Chase(); 
+            Chase();
+            anim.SetBool("Attack", false);
         }
         if (!InSightRange)
         {
@@ -72,6 +75,7 @@ public class EAI : MonoBehaviour
             nextAttackTime = Time.time + 1 / attackRate;
         }
         rb.velocity = Vector3.zero;
+        anim.SetBool("Attack", true);
     }
     void Damage()
     {
@@ -139,11 +143,11 @@ public class EAI : MonoBehaviour
 
         if (rb.velocity.x >= 0.01f)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(-1, 1, 1);
         }
         else if (rb.velocity.x <= -0.01f)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(1, 1, 1);
         }
     }
 

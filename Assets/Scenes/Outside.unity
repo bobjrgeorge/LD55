@@ -17327,8 +17327,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.6080506, y: 0.05365157}
-  m_Size: {x: 1.7161012, y: 3.7541127}
+  m_Offset: {x: -0.07287669, y: 0.05365157}
+  m_Size: {x: 0.6457534, y: 3.7541127}
   m_Direction: 0
 --- !u!114 &1705119394
 MonoBehaviour:
@@ -17349,13 +17349,14 @@ MonoBehaviour:
   InAttackRange: 0
   InSightRange: 0
   sightRange: 10.59
-  attackRange: 1.26
+  attackRange: 1.35
   TimeBetweenAttacks: 0
   Player:
     serializedVersion: 2
     m_Bits: 256
-  DeBug: 1.26
+  DeBug: 3.04
   Playerdamage: 1
+  anim: {fileID: 1847933049}
 --- !u!114 &1705119395
 MonoBehaviour:
   m_ObjectHideFlags: 0
