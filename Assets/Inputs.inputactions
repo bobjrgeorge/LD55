@@ -42,6 +42,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "SummonTwo",
+                    "type": "Button",
+                    "id": "51cbe342-9d4a-456e-bab1-a420968db2f2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Interact",
                     "type": "Button",
                     "id": "0d97d9ed-782b-4e17-9520-f6030cce7e45",
@@ -137,6 +146,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4fe2cb51-27e0-4447-821d-1888e71f6358",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SummonTwo",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
