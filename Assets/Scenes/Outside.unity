@@ -12924,6 +12924,7 @@ MonoBehaviour:
   DeBug: 3.04
   Playerdamage: 1
   anim: {fileID: 1389312599}
+  AnimationTime: 0
 --- !u!114 &1098504431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14220,36 +14221,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 0, y: -3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 7
-      m_TileSpriteIndex: 2
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 1, y: -3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 2, y: -3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 5
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 3, y: -3, z: 0}
     second:
       serializedVersion: 2
@@ -14372,22 +14343,22 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 07bdabc33e36c3a419dd82e9d342a303, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 4
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 4b1b4fd747b2810418bc86b13b92a350, type: 2}
-  - m_RefCount: 4
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: c5e538c41c246b74ea5efb411beeecf7, type: 2}
-  - m_RefCount: 4
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 011e7ee35f7944d439e87282dda7c847, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: b2e898f01da4a4f4194757bdb389ab17, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 4
+  - m_RefCount: 3
     m_Data: {fileID: -1440708761, guid: f117295db3815d9448ef6fe604c88a4f, type: 3}
-  - m_RefCount: 4
+  - m_RefCount: 3
     m_Data: {fileID: 1152843468, guid: f117295db3815d9448ef6fe604c88a4f, type: 3}
-  - m_RefCount: 4
+  - m_RefCount: 3
     m_Data: {fileID: -1400550346, guid: f117295db3815d9448ef6fe604c88a4f, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -14404,7 +14375,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: -1876157932, guid: f117295db3815d9448ef6fe604c88a4f, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 17
+  - m_RefCount: 14
     m_Data:
       e00: 1
       e01: 0
@@ -14423,7 +14394,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 17
+  - m_RefCount: 14
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -24945,7 +24916,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667622548}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.07, y: -0.76, z: 0}
+  m_LocalPosition: {x: 3.51, y: -0.76, z: 0}
   m_LocalScale: {x: 0.8706, y: 0.8706, z: 0.8706}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25187,6 +25158,7 @@ MonoBehaviour:
   DeBug: 3.04
   Playerdamage: 1
   anim: {fileID: 1847933049}
+  AnimationTime: 0
 --- !u!114 &1705119395
 MonoBehaviour:
   m_ObjectHideFlags: 0
