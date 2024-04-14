@@ -14,8 +14,6 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
 
-    public UnityEvent attackVL;
-
     void Start()
     {
         sentences = new Queue<string>();
@@ -66,6 +64,6 @@ public class DialogueManager : MonoBehaviour
         dialogue.collider.SetActive(true); 
         FindObjectOfType<Interactable>().hasStarted = false;
         animator.SetBool("IsOpen", false);
-        attackVL.Invoke();
+        dialogue.attackVL.Invoke();
     }
 }
