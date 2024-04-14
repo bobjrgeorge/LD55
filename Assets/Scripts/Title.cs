@@ -7,6 +7,8 @@ public class Title : MonoBehaviour
     public GameObject fad;
     public Animator fade;
 
+    public GameObject controlls;
+
     public void Start()
     {
         StartCoroutine(Fade());
@@ -19,6 +21,16 @@ public class Title : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+
+    public void ControllsScreen()
+    {
+        controlls.SetActive(true);
+    }
+
+    public void Back()
+    {
+        controlls.SetActive(false);
     }
 
     IEnumerator Fade()
