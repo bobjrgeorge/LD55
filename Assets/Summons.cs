@@ -23,6 +23,10 @@ public class Summons : MonoBehaviour
 
         if(input.PlayerSummonOne())
         {
+            if (AvalibleSummons[0] == null)
+            {
+                return;
+            }
             Instantiate(AvalibleSummons[0], transform.position, Quaternion.identity);
             AvalibleSummons[0].gameObject.SetActive(true);
         }
