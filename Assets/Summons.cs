@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,12 +7,14 @@ public class Summons : MonoBehaviour
     public List<Transform> AvalibleSummons;
     public Transform pendingAdd;
     private InputSystem input;
+    public bool SummonOne;
+    public bool SummonTwo;
+    public bool canReset = true;
 
     //public enemy S_Enemy;
     void Start()
     {
         input = InputSystem.Instance;
-        
     }
 
     // Update is called once per frame
@@ -22,7 +25,6 @@ public class Summons : MonoBehaviour
             AvalibleSummons.Add(pendingAdd);
             pendingAdd = null;
         }
-
         if(input.PlayerSummonOne())
         {
             if (AvalibleSummons[0] == null)
@@ -32,7 +34,7 @@ public class Summons : MonoBehaviour
             Instantiate(AvalibleSummons[0], transform.position, Quaternion.identity);
             AvalibleSummons[0].gameObject.SetActive(true);
         }
-        if(input.PlayerSummonTwo())
+        if (input.PlayerSummonTwo())
         {
             if (AvalibleSummons[1] == null)
             {
@@ -40,6 +42,7 @@ public class Summons : MonoBehaviour
             }
             Instantiate(AvalibleSummons[1], transform.position, Quaternion.identity);
             AvalibleSummons[1].gameObject.SetActive(true);
+
         }
     }
 }

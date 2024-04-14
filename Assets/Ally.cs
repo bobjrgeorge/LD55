@@ -31,15 +31,16 @@ public class Ally : MonoBehaviour
     public float DeBug;
     public List<Transform> Enemies;
     public string ID;
-    public Summons summon;
+    public Summons summons;
     public List<GameObject> SummonSorter;
+    public int health;
 
     void Start()
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         InvokeRepeating("UpdatePath", 0, .5f);
-        ID = name + summon.AvalibleSummons;
+        ID = name + summons.AvalibleSummons;
 
         for (int i = 0; i < Object.FindObjectsOfType<Ally>().Length; i++)
         {
@@ -97,10 +98,21 @@ public class Ally : MonoBehaviour
                 Enemies.RemoveAt(i);
             }
         }
+    }
 
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
 
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
 
-
+    void Die()
+    {
+        Destroy(gameObject);
     }
 
     void Attack()
