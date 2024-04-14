@@ -3116,9 +3116,6 @@ MonoBehaviour:
   nameText: {fileID: 1286918185}
   dialagueText: {fileID: 1595557898}
   animator: {fileID: 578776656}
-  attackVL:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!4 &897878954
 Transform:
   m_ObjectHideFlags: 0
@@ -21041,6 +21038,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 662336574942894270, guid: 7489e47463dfb5448ab0ba9151687fd1, type: 3}
+      propertyPath: speed
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 1250763017442119982, guid: 7489e47463dfb5448ab0ba9151687fd1, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -21219,3 +21220,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AvalibleSummons: []
   pendingAdd: {fileID: 0}
+  SummonOne: 0
+  SummonTwo: 0
+  canReset: 1
