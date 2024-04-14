@@ -64,6 +64,15 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""SummonTwo"",
+                    ""type"": ""Button"",
+                    ""id"": ""51cbe342-9d4a-456e-bab1-a420968db2f2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""0d97d9ed-782b-4e17-9520-f6030cce7e45"",
@@ -161,6 +170,17 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4fe2cb51-27e0-4447-821d-1888e71f6358"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SummonTwo"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -173,6 +193,7 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_SummonOne = m_Player.FindAction("SummonOne", throwIfNotFound: true);
+        m_Player_SummonTwo = m_Player.FindAction("SummonTwo", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
     }
 
@@ -239,6 +260,7 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Attack;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_SummonOne;
+    private readonly InputAction m_Player_SummonTwo;
     private readonly InputAction m_Player_Interact;
     public struct PlayerActions
     {
@@ -248,6 +270,7 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
         public InputAction @Attack => m_Wrapper.m_Player_Attack;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @SummonOne => m_Wrapper.m_Player_SummonOne;
+        public InputAction @SummonTwo => m_Wrapper.m_Player_SummonTwo;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
@@ -270,6 +293,9 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
             @SummonOne.started += instance.OnSummonOne;
             @SummonOne.performed += instance.OnSummonOne;
             @SummonOne.canceled += instance.OnSummonOne;
+            @SummonTwo.started += instance.OnSummonTwo;
+            @SummonTwo.performed += instance.OnSummonTwo;
+            @SummonTwo.canceled += instance.OnSummonTwo;
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
@@ -289,6 +315,9 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
             @SummonOne.started -= instance.OnSummonOne;
             @SummonOne.performed -= instance.OnSummonOne;
             @SummonOne.canceled -= instance.OnSummonOne;
+            @SummonTwo.started -= instance.OnSummonTwo;
+            @SummonTwo.performed -= instance.OnSummonTwo;
+            @SummonTwo.canceled -= instance.OnSummonTwo;
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
@@ -315,6 +344,7 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
         void OnAttack(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnSummonOne(InputAction.CallbackContext context);
+        void OnSummonTwo(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
     }
 }

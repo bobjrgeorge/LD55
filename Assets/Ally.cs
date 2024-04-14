@@ -32,6 +32,7 @@ public class Ally : MonoBehaviour
     public List<Transform> Enemies;
     public string ID;
     public Summons summon;
+    public List<GameObject> SummonSorter;
 
     void Start()
     {
@@ -39,6 +40,23 @@ public class Ally : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         InvokeRepeating("UpdatePath", 0, .5f);
         ID = name + summon.AvalibleSummons;
+
+        for (int i = 0; i < Object.FindObjectsOfType<Ally>().Length; i++)
+        {
+            if (Object.FindObjectsOfType<Ally>()[i] != this)
+            {
+                if (Object.FindObjectsOfType<Ally>()[i].ID == ID)
+                {
+                    GameObject summon = FindObjectOfType<Ally>().gameObject;
+                    SummonSorter.Add(summon);
+                    List<GameObject> onlyUniqueObjects = SummonSorter.Distinct().ToList();
+                    for(int j = 0; j < SummonSorter.Count; j++)
+                    {
+                        Destroy(SummonSorter[j]);
+                    }
+                }
+            }
+        }
     }
 
     private void FixedUpdate()
@@ -80,16 +98,9 @@ public class Ally : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < Object.FindObjectsOfType<Ally>().Length; i++)
-        {
-            if (Object.FindObjectsOfType<Ally>()[i] != this)
-            {
-                if (Object.FindObjectsOfType<Ally>()[i].ID == ID)
-                {
-                    Destroy(gameObject);
-                }
-            }
-        }
+
+
+
     }
 
     void Attack()
