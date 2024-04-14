@@ -6,6 +6,8 @@ public class Summons : MonoBehaviour
     public List<Transform> AvalibleSummons;
     public Transform pendingAdd;
     private InputSystem input;
+    bool canSummon;
+    public string ID;
     //public enemy S_Enemy;
     void Start()
     {
@@ -23,6 +25,16 @@ public class Summons : MonoBehaviour
 
         if(input.PlayerSummonOne())
         {
+            for (int i = 0; i < Object.FindObjectsOfType<Summons>().Length; i++) 
+            {
+                if (Object.FindObjectsOfType<Summons>()[i] != this)
+                {
+                    if (Object.FindObjectsOfType<Summons>()[i].ID == ID) 
+                    {
+                        Destroy(gameObject);
+                    }
+                }
+            }
             if (AvalibleSummons[0] == null)
             {
                 return;
