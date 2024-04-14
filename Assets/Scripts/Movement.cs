@@ -1,7 +1,7 @@
 using UnityEngine;
 using static UnityEditor.Timeline.TimelinePlaybackControls;
 
-public class Movement : MonoBehaviour
+public class Movement : MonoBehaviour 
 {
     public Rigidbody2D rb;
     public float speed;

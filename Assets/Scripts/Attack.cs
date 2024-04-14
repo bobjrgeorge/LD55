@@ -1,6 +1,6 @@
 
 using UnityEngine;
-
+ 
 public class Attack : MonoBehaviour
 {
     private InputSystem input;
