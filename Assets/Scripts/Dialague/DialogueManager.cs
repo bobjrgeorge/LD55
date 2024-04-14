@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -12,6 +13,8 @@ public class DialogueManager : MonoBehaviour
     public Animator animator;
 
     private Queue<string> sentences;
+
+    public UnityEvent attackVL;
 
     void Start()
     {
@@ -63,5 +66,6 @@ public class DialogueManager : MonoBehaviour
         dialogue.collider.SetActive(true); 
         FindObjectOfType<Interactable>().hasStarted = false;
         animator.SetBool("IsOpen", false);
+        attackVL.Invoke();
     }
 }
