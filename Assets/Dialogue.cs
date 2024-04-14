@@ -11,4 +11,6 @@ public class Dialogue
     public string[] sentences;
     
     public Animator characterAnimator;
+
+    public GameObject collider;
 }

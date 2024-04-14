@@ -60,6 +60,7 @@ public class DialogueManager : MonoBehaviour
     public void EndDialague(Dialogue dialogue)
     {
         dialogue.characterAnimator.SetBool("Third", true);
+        dialogue.collider.SetActive(true); 
         FindObjectOfType<Interactable>().hasStarted = false;
         animator.SetBool("IsOpen", false);
     }
