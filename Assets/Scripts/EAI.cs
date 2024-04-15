@@ -50,7 +50,6 @@ public class EAI : MonoBehaviour
 
         if (InAttackRange)
         {
-
             Attack();
             attacking = true;
         }

@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BigFight.unity
     guid: 2eb8039cabe21174da1cb7b6156d6321
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: 8417a80d89f316349a04df3af1547e45
   m_configObjects: {}

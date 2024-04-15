@@ -9570,7 +9570,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &475691931
 Transform:
   m_ObjectHideFlags: 0
@@ -60494,6 +60494,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937686143}
   m_CullTransparentMesh: 1
+--- !u!4 &1939428704 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6390397849090041706, guid: eadb8847f687a5a4c8df76da1b8c4c79, type: 3}
+  m_PrefabInstance: {fileID: 308416104066020890}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1969210347
 GameObject:
   m_ObjectHideFlags: 0
@@ -60797,6 +60802,7 @@ MonoBehaviour:
   AvalibleSummons:
   - {fileID: 792868460}
   - {fileID: 1212274472}
+  - {fileID: 1939428704}
   pendingAdd: {fileID: 0}
   input: {fileID: 168190947}
   SummonOne: 0
@@ -61335,11 +61341,11 @@ PrefabInstance:
     - target: {fileID: 4910228582287290375, guid: eadb8847f687a5a4c8df76da1b8c4c79, type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2108320255}
     - target: {fileID: 4910228582287290375, guid: eadb8847f687a5a4c8df76da1b8c4c79, type: 3}
       propertyPath: summons
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2013531131}
     - target: {fileID: 8853697098163943080, guid: eadb8847f687a5a4c8df76da1b8c4c79, type: 3}
       propertyPath: m_Name
       value: goop
