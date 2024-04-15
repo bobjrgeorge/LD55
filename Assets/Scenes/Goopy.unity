@@ -11133,6 +11133,7 @@ MonoBehaviour:
   SummonTwo: 0
   canReset: 1
   goop: {fileID: 7910554567883336638}
+  goopAmmo: 2
   animator: {fileID: 0}
 --- !u!114 &561021133 stripped
 MonoBehaviour:
@@ -74778,7 +74779,7 @@ GameObject:
   - component: {fileID: 842030909916503033}
   - component: {fileID: 7910554567883336638}
   - component: {fileID: 7910554567883336639}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: goop
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -75097,7 +75098,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8692861141271122324}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: goop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75162,9 +75163,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_Interpolate: 1
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!1 &6736508743906880200
 GameObject:
@@ -75211,7 +75212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8628054088846850465}
   - component: {fileID: 460666949041945194}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AllySprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75254,7 +75255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4961888340998344312}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ally
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75323,9 +75324,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c546728608156774499310b42b27723c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RollSpeed: 8
-  ammo: 5
-  goopDamage: 999
+  RollSpeed: 100
+  goopDamage: 5
   Range: 2.95
   Enemy:
     serializedVersion: 2

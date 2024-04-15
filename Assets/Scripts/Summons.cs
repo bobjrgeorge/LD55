@@ -11,7 +11,7 @@ public class Summons : MonoBehaviour
     public bool SummonTwo;
     public bool canReset = true;
     public GoopAttk goop;
-
+    public float goopAmmo;
     public Animator animator;
 
     //public enemy S_Enemy;
@@ -34,22 +34,17 @@ public class Summons : MonoBehaviour
             AvalibleSummons[0].gameObject.SetActive(true);
             animator.SetTrigger("Summon");
         }
-        if (input.PlayerSummonTwo())
+
+        if(input.PlayerSummonTwo())
         {
             if (AvalibleSummons[1] == null)
             {
                 return;
             }
-            Instantiate(AvalibleSummons[1], transform.position, Quaternion.identity);
-            AvalibleSummons[1].gameObject.SetActive(true);
-            animator.SetTrigger("Summon");
-        }
-        if(input.PlayerSummonTwo() && goop.ammo > 0)
-        {
-            if (AvalibleSummons[1] == null)
+            if(goopAmmo <= 0)
             {
                 return;
-            }
+            } 
             Instantiate(AvalibleSummons[1], transform.position, Quaternion.identity);
             AvalibleSummons[1].gameObject.SetActive(true);
             animator.SetTrigger("Summon");

@@ -7,7 +7,6 @@ using System.Linq;
 public class GoopAttk : MonoBehaviour
 {
     public float RollSpeed;
-    public float ammo;
     Rigidbody2D rb;
     public int goopDamage;
     public float Range;
@@ -34,7 +33,12 @@ public class GoopAttk : MonoBehaviour
                     for(int j = 0; j < SummonSorter.Count; j++)
                     {
                         Destroy(SummonSorter[j]);
+                        summons.goopAmmo += 0.5f;
                     }
+                }
+                else
+                {
+                    summons.goopAmmo -= 1;
                 }
             }
         }
