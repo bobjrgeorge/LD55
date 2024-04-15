@@ -29,6 +29,7 @@ public class RizzardBoss : MonoBehaviour
     public TimeManager timeManager;
     public Movement move;
     public AudioSource Rain;
+    public AudioSource Song;
     bool invince;
     public Transform SlowDown;
     public float DamageRange;
@@ -48,11 +49,13 @@ public class RizzardBoss : MonoBehaviour
         {
             timeManager.SlowDownFactor = timeManager.slowTimeScale;
             Rain.pitch = 0.08f;
+            Song.pitch = 0.3f;
         }
         else if (!InSlowdownRange || move.grounded)
         {
             timeManager.SlowDownFactor = 1;
             Rain.pitch = 1f;
+            Song.pitch = 1f;
         }
 
     }
