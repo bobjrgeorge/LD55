@@ -41405,7 +41405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8740510732519453993}
-  fade: {fileID: 0}
+  fade: {fileID: 1002827737}
   heart1: {fileID: 477400662}
   heart2: {fileID: 202809652}
   heart3: {fileID: 680438681}

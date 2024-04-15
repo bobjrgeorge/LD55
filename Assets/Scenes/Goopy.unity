@@ -12819,6 +12819,10 @@ PrefabInstance:
       propertyPath: damage
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1090621412737628700, guid: 7489e47463dfb5448ab0ba9151687fd1, type: 3}
+      propertyPath: AnimationTime
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1250763017442119982, guid: 7489e47463dfb5448ab0ba9151687fd1, type: 3}
       propertyPath: m_RootOrder
       value: 11
