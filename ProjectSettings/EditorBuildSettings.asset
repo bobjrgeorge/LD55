@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Outside.unity
     guid: 0a6ab07f2a0181e42a793afc21b63a2d
+  - enabled: 1
+    path: Assets/Scenes/Goopy.unity
+    guid: 66581e9603fa95b40bfa1acb07afa9d2
+  - enabled: 1
+    path: Assets/Scenes/BigFight.unity
+    guid: 2eb8039cabe21174da1cb7b6156d6321
   m_configObjects: {}

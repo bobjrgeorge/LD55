@@ -23,6 +23,7 @@ public class EAI : MonoBehaviour
     public float TimeBetweenAttacks;
     bool alreadyAttacked;
     public LayerMask Player;
+    public LayerMask Ally;
     float nextAttackTime = 0;
     float attackRate = 1;
     Vector3 Startpos;
@@ -39,7 +40,7 @@ public class EAI : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         InvokeRepeating("UpdatePath", 0, .5f);
         Startpos = new Vector2(transform.position.x, transform.position.y);
-        
+
     }
     //float to set timer for end of animation so I can take damage after the anim
     private void FixedUpdate()
@@ -47,12 +48,14 @@ public class EAI : MonoBehaviour
         InAttackRange = Physics2D.OverlapCircle(transform.position, attackRange, Player);
         InSightRange = Physics2D.OverlapCircle(transform.position, sightRange, Player);
 
-        if (InAttackRange) {
+        if (InAttackRange)
+        {
 
             Attack();
             attacking = true;
         }
-        if(InSightRange && !InAttackRange) { 
+        if (InSightRange && !InAttackRange)
+        {
             Chase();
             anim.SetBool("Attack", false);
         }
@@ -60,7 +63,7 @@ public class EAI : MonoBehaviour
         {
             float distance = Vector2.Distance(rb.position, Startpos);
             DeBug = 5;
-            if(distance <= 5)
+            if (distance <= 5)
             {
                 rb.velocity = Vector2.zero;
                 return;
@@ -74,6 +77,7 @@ public class EAI : MonoBehaviour
 
     void Attack()
     {
+        StartCoroutine(AnimTime());
         Chase();
     }
     void Damage()
@@ -81,13 +85,13 @@ public class EAI : MonoBehaviour
         Collider2D[] HitPlayer = Physics2D.OverlapCircleAll(transform.position, attackRange, Player);
         foreach (Collider2D PlayerHealth in HitPlayer)
         {
-            if(PlayerHealth.GetComponent<PlayerHealth>() != null)
+            if (PlayerHealth.GetComponent<PlayerHealth>() != null)
             {
                 PlayerHealth.GetComponent<PlayerHealth>().TakeDamage(Playerdamage);
             }
         }
 
-        Collider2D[] HitAlly = Physics2D.OverlapCircleAll(transform.position, attackRange, Player);
+        Collider2D[] HitAlly = Physics2D.OverlapCircleAll(transform.position, attackRange, Ally);
         foreach (Collider2D Ally in HitAlly)
         {
             Ally.GetComponent<Ally>().TakeDamage(Playerdamage);
@@ -100,17 +104,17 @@ public class EAI : MonoBehaviour
     }
     void UpdatePath()
     {
-         if (seeker.IsDone())
-             seeker.StartPath(rb.position, target.position, OnPathComplete);
+        if (seeker.IsDone())
+            seeker.StartPath(rb.position, target.position, OnPathComplete);
     }
 
     void OnPathComplete(Path p)
     {
-         if(!p.error)
-         {
+        if (!p.error)
+        {
             path = p;
             currentWaypoint = 0;
-         }
+        }
     }
 
     void MovementLogic()
