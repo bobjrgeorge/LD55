@@ -46,9 +46,12 @@ public class Summons : MonoBehaviour
                 return;
             } 
             Instantiate(AvalibleSummons[1], transform.position, Quaternion.identity);
+            goopAmmo -= 1;
             AvalibleSummons[1].gameObject.SetActive(true);
             animator.SetTrigger("Summon");
         }
     }
+
+
 }
  

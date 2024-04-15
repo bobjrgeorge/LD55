@@ -11126,7 +11126,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AvalibleSummons:
   - {fileID: 2559137852175417558}
-  - {fileID: 2304988000564862778}
   pendingAdd: {fileID: 0}
   input: {fileID: 1003414058}
   SummonOne: 0
@@ -12807,10 +12806,18 @@ PrefabInstance:
       propertyPath: speed
       value: 250
       objectReference: {fileID: 0}
+    - target: {fileID: 662336574942894270, guid: 7489e47463dfb5448ab0ba9151687fd1, type: 3}
+      propertyPath: Ground.m_Bits
+      value: 192
+      objectReference: {fileID: 0}
     - target: {fileID: 1090621412737628700, guid: 7489e47463dfb5448ab0ba9151687fd1, type: 3}
       propertyPath: input
       value: 
       objectReference: {fileID: 1003414058}
+    - target: {fileID: 1090621412737628700, guid: 7489e47463dfb5448ab0ba9151687fd1, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1250763017442119982, guid: 7489e47463dfb5448ab0ba9151687fd1, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -13141,7 +13148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACYn+uhmecleQIAADIFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1zmzAQ/SsenWsPEAeb3lriOD0k8dTt5MJFhsVoLCRGH7GdjP97VwIMcX2xeG8/3j4tfBImdAO5kWqtWPEsCyDfJ8SdybfJQD7Bie6l2LIP6GPeWGEqF0R9zG9qmEQ8dGla1mAUy3+IPXfBAYJWsFKqelXsIZXaaIRLyjUgpaRx2QKhzwk54d80cSlnPEULd/rAUxJMLnjMQRhQQ+g8mc0T/EXzLmMaztxzsrxfdJnTu9n9Io6WQbxcTYOFL2NFzmndQOFmGqqFUdg3jn2cwHG7EMfkknOmO63EnBvvRUobbXFSDCgYxdm9QBdfAdtXxpUbJ7+WpQbTGaPo+YEptLCtSn7K1tea6kMr7J1y6230itqSz/+x09DTpZL1U981DFwHU7H88Juec6rNyPYx/PBVthVHyg90x+GtAvEi10paUSBplHWpVkP0MDxeB0sryA8D3kq9AW0z2N3fcn/HboaLn/2UclbvHDWbt8CWS++2Xw1QeC+/ULBfHN2VQNSp+KvhD92PN6wjHpnSBqluSuHk7aRVLpSsvGduGmtSqQR4uBPdgKDcnDdYxtxe4A03anvDPFL3LnXNO65/RW5SPDzEB8ENtZHH62XpSh6fQVev1nAmYBDtiBf0KZVCtPs19qRP21pV0nyUtres+LpaZB4vIblPynhJk3AZ301hWeawSOJdlCfhLgqJ3z0mcE7KN63Qzh68NTEUF7hn/Sdmsla08bteKHpcs49ajixnopTbXAGI17bCVTgobILvZLEqGBq0BWOY8PdNPjPCZX6AIrsWyvykq5NRNBuqZKRh79I4JCOp/6ZkxMHXXd4oeGdwdM37Yhdy+QdQSwMEFAAACAgAAJif6wcDicBtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJKJmUWqpallmplFoqWhhZmxbqpFWnKquaVZklGypWGSkaFSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAJif66GZ5yV5AgAAMgUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAJif6wcDicBtAAAAeAAAAAkAJAAAAAAAAAAAAAAAxgIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB+AwAAAAA=
+    dataString: UEsDBBQAAAgIAACYn+uNFbJEdgIAADMFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMtyozAQ/BWXzusU4Cd72yWOs4ckrjhbuXCRYTAqC4nSI7aT8r/vSIAhXl8suufR0xr4IkzoGjIj1Vqx/EnmQH6OiDuTH6OefIQT3UuxZZ/Qxbyz3JQuiPqYV2qYRDx0aVpWYBTLfok9d8EBglawQqpqle8hkdpohAvKNSClpHHZAqGvETnh3zh2KWc8RQt3+sRTHIwueMxAGFB96Cy+i90vmrYZ47ABlkHcZo4nd7PFPFqGs8lqHCx8GSsyTqsacjdTXy2cRl3juY8TOG4b4kbLJOdMt1qJOdfei4TW2uKkGJAzirN7gS6+BLYvjSs3TH4pCg2mNUbR8z1TaGFTlfyWja8V1YdG2Afl1tvoFTUln/5jx6GnCyWrx65rGLgOpmTZ4ZWeM6rNwPYhfP9dthVHyg90x+G9BPEs10pakSNplHWpVkN03z9eB0tKyA493ki9AW3d293dcnfHboaLn/2UcFbtHHU3bYAtl95tvxqg8F7+oGC/OLotgahT8VfDG90PN6wlHpjSBql2SuHk7aRVLpSsvGduGmsSqQR4uBVdg6DcnDdYxtxe4A03aHvDPFD3LrXNW657RW5SPNzHB8ENtZHH62XpUh6fQJcv1nAmoBftiGf0KZFCNPs19KRL21pV0GyQtrcs/75aZDpfQjyLi/mSxuFyPhnDsshgEc93URaHuygkfveYwDkp3zRCW3vw1kRfXOCedZ+Y0VrR2u96ruhxzT4rORTIRCG3mQIQL02Jq3JQ2AVfynyVM3RoC8Yw4S+cfKWEy+wAeXrtmfpRVyejaNpXSUnNPqRxSEoS/1FJiYOvy7xR8MHg6Jp3xS7k8g9QSwMEFAAACAgAAJif6wcDicBtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJKJmUWqpallmplFoqWhhZmxbqpFWnKquaVZklGypWGSkaFSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAJif640VskR2AgAAMwUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAJif6wcDicBtAAAAeAAAAAkAJAAAAAAAAAAAAAAAwwIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB7AwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -13357,7 +13364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SlowDownFactor: 0.05
   slowdownLength: 2
-  slowTimeScale: 0.1
+  slowTimeScale: 0.18
 --- !u!4 &1003414057
 Transform:
   m_ObjectHideFlags: 0
@@ -18421,7 +18428,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1030660668
 Transform:
   m_ObjectHideFlags: 0
@@ -19028,7 +19035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 561021135}
-  speed: 413.6
+  speed: 200
   NextWaypointDistace: 3
   EnemyGFX: {fileID: 1103534604}
   InAttackRange: 0
@@ -19169,9 +19176,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b61dbbe3f711c74baf5daeeae25cf5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
+  MaxHealth: 450
   summon: {fileID: 561021129}
-  SummonVarient: {fileID: 0}
+  SummonVarient: {fileID: 8692861141271122324}
   healthBar: {fileID: 964031445}
 --- !u!1 &1106080949
 GameObject:
@@ -32924,7 +32931,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1332738329}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 28dbb1c1f6498594a887fe1c08330627, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -75371,7 +75378,7 @@ MonoBehaviour:
   summons: {fileID: 561021129}
   SummonSorter:
   - {fileID: 733814767105136565}
-  health: 3
+  health: 1
 --- !u!4 &2304988000564862778
 Transform:
   m_ObjectHideFlags: 0
@@ -75528,7 +75535,7 @@ MonoBehaviour:
   Enemy:
     serializedVersion: 2
     m_Bits: 128
-  damage: 10
+  damage: 25
   PlayerTrans: {fileID: 561021135}
   DeBug: 0
   Enemies:
@@ -75537,7 +75544,7 @@ MonoBehaviour:
   summons: {fileID: 561021129}
   SummonSorter:
   - {fileID: 3913659593043216473}
-  health: 3
+  health: 1
 --- !u!212 &4187092186639148422
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -75883,10 +75890,10 @@ MonoBehaviour:
   Enemy:
     serializedVersion: 2
     m_Bits: 128
-  SummonSorter:
-  - {fileID: 733814767105136565}
+  SummonSorter: []
   ID: 
   summons: {fileID: 561021129}
+  cam: {fileID: 685285057}
 --- !u!70 &7910554567883336639
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

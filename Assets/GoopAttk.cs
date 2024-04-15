@@ -14,6 +14,7 @@ public class GoopAttk : MonoBehaviour
     public List<GameObject> SummonSorter;
     public string ID;
     public Summons summons;
+    public Camera cam;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,12 +34,8 @@ public class GoopAttk : MonoBehaviour
                     for(int j = 0; j < SummonSorter.Count; j++)
                     {
                         Destroy(SummonSorter[j]);
-                        summons.goopAmmo += 0.5f;
+                        summons.goopAmmo += 1f;
                     }
-                }
-                else
-                {
-                    summons.goopAmmo -= 1;
                 }
             }
         }
@@ -53,6 +50,12 @@ public class GoopAttk : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<enemy>().TakeDamage(goopDamage);
+        }
+
+        Vector3 VeiwPos = cam.WorldToViewportPoint(transform.position);
+        if(VeiwPos.x > 1 || VeiwPos.x < 0)
+        {
+            Destroy(gameObject);
         }
     }
 }
