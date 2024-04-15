@@ -41,6 +41,10 @@ public class InputSystem : MonoBehaviour
     {
         return playermovement.Player.SummonTwo.triggered;
     }
+    public bool PlayerSummonTreee()
+    {
+        return playermovement.Player.SummonThreee.triggered;
+    }
 
     public bool PlayerInteract()
     {

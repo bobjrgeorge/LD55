@@ -51,6 +51,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "SummonThreee",
+                    "type": "Button",
+                    "id": "5d141447-f9bf-4731-9818-31e087e466da",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Interact",
                     "type": "Button",
                     "id": "0d97d9ed-782b-4e17-9520-f6030cce7e45",
@@ -157,6 +166,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "SummonTwo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "630001d1-0c28-4586-a6b9-44f8635a843f",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SummonThreee",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -19,12 +19,12 @@ public class Summons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(pendingAdd != null)
+        if (pendingAdd != null)
         {
             AvalibleSummons.Add(pendingAdd);
             pendingAdd = null;
         }
-        if(input.PlayerSummonOne())
+        if (input.PlayerSummonOne())
         {
             if (AvalibleSummons[0] == null)
             {
@@ -35,21 +35,34 @@ public class Summons : MonoBehaviour
             animator.SetTrigger("Summon");
         }
 
-        if(input.PlayerSummonTwo())
+        if (input.PlayerSummonTwo())
         {
             if (AvalibleSummons[1] == null)
             {
                 return;
             }
-            if(goopAmmo <= 0)
-            {
-                return;
-            } 
             Instantiate(AvalibleSummons[1], transform.position, Quaternion.identity);
-            goopAmmo -= 1;
             AvalibleSummons[1].gameObject.SetActive(true);
             animator.SetTrigger("Summon");
         }
+
+        if (input.PlayerSummonTreee())
+        {
+            if (AvalibleSummons[2] == null)
+            {
+                return;
+            }
+            if (goopAmmo <= 0)
+            {
+                return;
+            }
+            Instantiate(AvalibleSummons[2], transform.position, Quaternion.identity);
+            goopAmmo -= 1;
+            AvalibleSummons[2].gameObject.SetActive(true);
+            animator.SetTrigger("Summon");
+        }
+            
+
     }
 
 

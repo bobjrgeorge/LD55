@@ -73,6 +73,15 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""SummonThreee"",
+                    ""type"": ""Button"",
+                    ""id"": ""5d141447-f9bf-4731-9818-31e087e466da"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""0d97d9ed-782b-4e17-9520-f6030cce7e45"",
@@ -181,6 +190,17 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
                     ""action"": ""SummonTwo"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""630001d1-0c28-4586-a6b9-44f8635a843f"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SummonThreee"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -194,6 +214,7 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_SummonOne = m_Player.FindAction("SummonOne", throwIfNotFound: true);
         m_Player_SummonTwo = m_Player.FindAction("SummonTwo", throwIfNotFound: true);
+        m_Player_SummonThreee = m_Player.FindAction("SummonThreee", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
     }
 
@@ -261,6 +282,7 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_SummonOne;
     private readonly InputAction m_Player_SummonTwo;
+    private readonly InputAction m_Player_SummonThreee;
     private readonly InputAction m_Player_Interact;
     public struct PlayerActions
     {
@@ -271,6 +293,7 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @SummonOne => m_Wrapper.m_Player_SummonOne;
         public InputAction @SummonTwo => m_Wrapper.m_Player_SummonTwo;
+        public InputAction @SummonThreee => m_Wrapper.m_Player_SummonThreee;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
@@ -296,6 +319,9 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
             @SummonTwo.started += instance.OnSummonTwo;
             @SummonTwo.performed += instance.OnSummonTwo;
             @SummonTwo.canceled += instance.OnSummonTwo;
+            @SummonThreee.started += instance.OnSummonThreee;
+            @SummonThreee.performed += instance.OnSummonThreee;
+            @SummonThreee.canceled += instance.OnSummonThreee;
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
@@ -318,6 +344,9 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
             @SummonTwo.started -= instance.OnSummonTwo;
             @SummonTwo.performed -= instance.OnSummonTwo;
             @SummonTwo.canceled -= instance.OnSummonTwo;
+            @SummonThreee.started -= instance.OnSummonThreee;
+            @SummonThreee.performed -= instance.OnSummonThreee;
+            @SummonThreee.canceled -= instance.OnSummonThreee;
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
@@ -345,6 +374,7 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnSummonOne(InputAction.CallbackContext context);
         void OnSummonTwo(InputAction.CallbackContext context);
+        void OnSummonThreee(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
     }
 }

@@ -192,11 +192,11 @@ public class Ally : MonoBehaviour
 
         if (rb.velocity.x >= 0.01f)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(-1, 1, 1);
         }
         else if (rb.velocity.x <= -0.01f)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(1, 1, 1);
         }
     }
 
