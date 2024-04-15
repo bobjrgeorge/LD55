@@ -48,7 +48,7 @@ public class RizzardBoss : MonoBehaviour
             timeManager.SlowDownFactor = timeManager.slowTimeScale;
             Rain.pitch = 0.08f;
         }
-        else if (!InSlowdownRange)
+        else if (!InSlowdownRange || move.grounded)
         {
             timeManager.SlowDownFactor = 1;
             Rain.pitch = 1f;
@@ -79,7 +79,6 @@ public class RizzardBoss : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && !invince)
         {
             Damage();
-            StartCoroutine(invinsibleTime());
         }
     }
 
@@ -88,9 +87,11 @@ public class RizzardBoss : MonoBehaviour
         Collider2D[] HitPlayer = Physics2D.OverlapCircleAll(transform.position, DamageRange, Player);
         foreach (Collider2D PlayerHealth in HitPlayer)
         {
-            if (PlayerHealth.GetComponent<PlayerHealth>() != null)
+            if (PlayerHealth.GetComponent<PlayerHealth>() != null && !invince)
             {
                 PlayerHealth.GetComponent<PlayerHealth>().TakeDamage(Playerdamage);
+                invince = true;
+                StartCoroutine(invinsibleTime());
             }
         }
 
@@ -166,8 +167,7 @@ public class RizzardBoss : MonoBehaviour
     }
     IEnumerator invinsibleTime()
     {
-        rb.AddForce(transform.up * 3);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         invince = false;
     }
 }
