@@ -33,6 +33,7 @@ public class RizzardBoss : MonoBehaviour
     public Transform SlowDown;
     public float DamageRange;
     public LayerMask Slow;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -151,11 +152,11 @@ public class RizzardBoss : MonoBehaviour
 
         if (rb.velocity.x >= 0.01f)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(-1, 1, 1);
         }
         else if (rb.velocity.x <= -0.01f)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(1, 1, 1);
         }
     }
 
