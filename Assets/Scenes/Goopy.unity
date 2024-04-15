@@ -11227,7 +11227,7 @@ GameObject:
   - component: {fileID: 570693615}
   - component: {fileID: 570693614}
   - component: {fileID: 570693613}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: Obsticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12211,7 +12211,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 685285054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1095433, y: 0.055808067, z: -10}
+  m_LocalPosition: {x: -2.1104531, y: 0.055805206, z: -10}
   m_LocalScale: {x: 0.72505, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18784,7 +18784,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.28037667}
   m_AnchorMax: {x: 1, y: 0.7195942}
-  m_AnchoredPosition: {x: -5, y: 0.000026703}
+  m_AnchoredPosition: {x: -5, y: 0.00002670288}
   m_SizeDelta: {x: -20, y: -0.000045776}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1108497288
@@ -28983,7 +28983,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 2.5, y: 0.0000077188}
+  m_AnchoredPosition: {x: 2.5, y: 0.0000076293945}
   m_SizeDelta: {x: 5, y: 0.000026703}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1206157452
@@ -75330,6 +75330,10 @@ MonoBehaviour:
   Enemy:
     serializedVersion: 2
     m_Bits: 128
+  SummonSorter:
+  - {fileID: 733814767105136565}
+  ID: 
+  summons: {fileID: 561021129}
 --- !u!70 &7910554567883336639
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
