@@ -27520,7 +27520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Homless Guy [He's huge.]
+    name: Homeless Guy [He's huge.]
     sentences:
     - Good evening, Billy! It is I, the great Tuboorious Tub Tub.
     - I see you stole your sisters hat.
@@ -41788,6 +41788,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ally
       objectReference: {fileID: 0}
+    - target: {fileID: 3100820965965524252, guid: 74f5d82e2e0c24c4e88e41181fc1d085, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3650339123313461676, guid: 74f5d82e2e0c24c4e88e41181fc1d085, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -41831,6 +41835,10 @@ PrefabInstance:
     - target: {fileID: 3650339123313461676, guid: 74f5d82e2e0c24c4e88e41181fc1d085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622007776605933453, guid: 74f5d82e2e0c24c4e88e41181fc1d085, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4730149152190923713, guid: 74f5d82e2e0c24c4e88e41181fc1d085, type: 3}
       propertyPath: damage

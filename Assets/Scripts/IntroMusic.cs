@@ -12,7 +12,7 @@ public class IntroMusic : MonoBehaviour
 
     IEnumerator StartMusic()
     {
-        yield return new WaitForSecondsRealtime(6.5f);
+        yield return new WaitForSecondsRealtime(6f);
         music.Invoke();
     }
 }
