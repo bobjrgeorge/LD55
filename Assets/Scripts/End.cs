@@ -13,6 +13,7 @@ public class End : MonoBehaviour
     public void Start()
     {
         StartCoroutine(FadeDissable());
+        Cursor.lockState = CursorLockMode.None;
     }
     public void BackToTitle()
     {
