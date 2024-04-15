@@ -31,6 +31,8 @@ public class RizzardBoss : MonoBehaviour
     public AudioSource Rain;
     bool invince;
     public Transform SlowDown;
+    public float DamageRange;
+    public LayerMask Slow;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,7 +59,7 @@ public class RizzardBoss : MonoBehaviour
     private void FixedUpdate()
     {
         InAttackRange = Physics2D.OverlapCircle(transform.position, attackRange, Player);
-        InSlowdownRange = Physics2D.OverlapCircle(SlowDown.position, slowdownRange, Player);
+        InSlowdownRange = Physics2D.OverlapCircle(SlowDown.position, slowdownRange, Slow);
 
         if (InAttackRange)
         {
@@ -83,7 +85,7 @@ public class RizzardBoss : MonoBehaviour
 
     void Damage()
     {
-        Collider2D[] HitPlayer = Physics2D.OverlapCircleAll(transform.position, attackRange, Player);
+        Collider2D[] HitPlayer = Physics2D.OverlapCircleAll(transform.position, DamageRange, Player);
         foreach (Collider2D PlayerHealth in HitPlayer)
         {
             if (PlayerHealth.GetComponent<PlayerHealth>() != null)
@@ -92,7 +94,7 @@ public class RizzardBoss : MonoBehaviour
             }
         }
 
-        Collider2D[] HitAlly = Physics2D.OverlapCircleAll(transform.position, attackRange, Player);
+        Collider2D[] HitAlly = Physics2D.OverlapCircleAll(transform.position, DamageRange, Player);
         foreach (Collider2D Ally in HitAlly)
         {
             Ally.GetComponent<Ally>().TakeDamage(Playerdamage);
@@ -160,6 +162,7 @@ public class RizzardBoss : MonoBehaviour
     {
         Gizmos.DrawWireSphere(transform.position, attackRange);
         Gizmos.DrawWireSphere(SlowDown.position, slowdownRange);
+        Gizmos.DrawWireSphere(transform.position, DamageRange);
     }
     IEnumerator invinsibleTime()
     {
