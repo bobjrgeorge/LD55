@@ -58437,6 +58437,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1030660668}
     m_Modifications:
     - target: {fileID: 299968422802519879, guid: cf2a52c8e4d22f04ea2bf16ce26542e4, type: 3}
+      propertyPath: summons
+      value: 
+      objectReference: {fileID: 561021129}
+    - target: {fileID: 299968422802519879, guid: cf2a52c8e4d22f04ea2bf16ce26542e4, type: 3}
       propertyPath: PlayerTrans
       value: 
       objectReference: {fileID: 561021135}
@@ -75830,7 +75834,7 @@ Transform:
   m_GameObject: {fileID: 6736508743906880200}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.01, y: 3.43, z: 0.42340797}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2559137852175417558}

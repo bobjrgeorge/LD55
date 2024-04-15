@@ -3489,6 +3489,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2013531137}
+    - target: {fileID: 9192966316994873279, guid: bb85a44a9637f094bbcbaa78111f2382, type: 3}
+      propertyPath: Player.m_Bits
+      value: 1280
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3758,6 +3762,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2013531137}
+    - target: {fileID: 9192966316994873279, guid: bb85a44a9637f094bbcbaa78111f2382, type: 3}
+      propertyPath: Player.m_Bits
+      value: 1280
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9665,6 +9673,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2013531137}
+    - target: {fileID: 9192966316994873279, guid: bb85a44a9637f094bbcbaa78111f2382, type: 3}
+      propertyPath: Player.m_Bits
+      value: 1280
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10313,6 +10325,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2013531137}
+    - target: {fileID: 9192966316994873279, guid: bb85a44a9637f094bbcbaa78111f2382, type: 3}
+      propertyPath: Player.m_Bits
+      value: 1280
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10563,6 +10579,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2013531137}
+    - target: {fileID: 9192966316994873279, guid: bb85a44a9637f094bbcbaa78111f2382, type: 3}
+      propertyPath: Player.m_Bits
+      value: 1280
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36281,6 +36301,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2013531137}
+    - target: {fileID: 9192966316994873279, guid: bb85a44a9637f094bbcbaa78111f2382, type: 3}
+      propertyPath: Player.m_Bits
+      value: 1280
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41649,6 +41673,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2013531137}
+    - target: {fileID: 9192966316994873279, guid: bb85a44a9637f094bbcbaa78111f2382, type: 3}
+      propertyPath: Player.m_Bits
+      value: 1280
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -46617,6 +46645,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2013531137}
+    - target: {fileID: 9192966316994873279, guid: bb85a44a9637f094bbcbaa78111f2382, type: 3}
+      propertyPath: Player.m_Bits
+      value: 1280
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -48565,6 +48597,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2013531137}
+    - target: {fileID: 9192966316994873279, guid: bb85a44a9637f094bbcbaa78111f2382, type: 3}
+      propertyPath: Player.m_Bits
+      value: 1280
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -59097,6 +59133,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2013531137}
+    - target: {fileID: 9192966316994873279, guid: bb85a44a9637f094bbcbaa78111f2382, type: 3}
+      propertyPath: Player.m_Bits
+      value: 1280
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

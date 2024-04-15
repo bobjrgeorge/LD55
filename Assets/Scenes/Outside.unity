@@ -7864,7 +7864,7 @@ MonoBehaviour:
   TimeBetweenAttacks: 5
   Player:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1280
   Ally:
     serializedVersion: 2
     m_Bits: 1024
@@ -12868,7 +12868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &643265845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51297,6 +51297,14 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1250763015704017912}
+    - target: {fileID: 9192966316994873279, guid: bb85a44a9637f094bbcbaa78111f2382, type: 3}
+      propertyPath: Player.m_Bits
+      value: 1280
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192966316994873279, guid: bb85a44a9637f094bbcbaa78111f2382, type: 3}
+      propertyPath: TimeBetweenAttacks
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
