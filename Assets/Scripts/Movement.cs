@@ -11,7 +11,8 @@ public class Movement : MonoBehaviour
     public Transform orientation;
     public Transform Groundcheck;
     public LayerMask Ground;
-    private bool grounded;
+    [HideInInspector]
+    public bool grounded;
     public float JumpFroce;
     public Transform InRangeCheck;
     public float JumprememberTime = 1f;

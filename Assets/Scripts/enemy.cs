@@ -45,7 +45,8 @@ public class enemy : MonoBehaviour
             }
             summon.pendingAdd = SummonVarient.transform;
         }
-           Destroy(gameObject);
+        Time.timeScale = 1f;
+        Destroy(gameObject);
     }
 }
  

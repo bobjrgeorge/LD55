@@ -1,87 +1,92 @@
-using UnityEngine;
 using Pathfinding;
 using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
+using UnityEngine;
 
-public class EAI : MonoBehaviour
+public class RizzardBoss : MonoBehaviour
 {
-
     public Transform target;
 
     public float speed = 200;
     public float NextWaypointDistace = 3;
-
     public Transform EnemyGFX;
-
     Path path;
     int currentWaypoint = 0;
     bool ReachedEndOfPath;
     Seeker seeker;
     Rigidbody2D rb;
     public bool InAttackRange;
-    public bool InSightRange;
-    public float sightRange, attackRange;
+    public bool InSlowdownRange;
+    public float attackRange;
+    public float slowdownRange;
     public float TimeBetweenAttacks;
     bool alreadyAttacked;
     public LayerMask Player;
-    float nextAttackTime = 0;
-    float attackRate = 1;
-    Vector3 Startpos;
-    public float DeBug;
     public int Playerdamage;
     public Animator anim;
-    public float AnimationTime;
     bool attacking;
-
+    public TimeManager timeManager;
+    public Movement move;
+    public AudioSource Rain;
+    bool invince;
+    public Transform SlowDown;
     // Start is called before the first frame update
     void Start()
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         InvokeRepeating("UpdatePath", 0, .5f);
-        Startpos = new Vector2(transform.position.x, transform.position.y);
-        
     }
-    //float to set timer for end of animation so I can take damage after the anim
+    private void Update()
+    {
+        timeManager.Slowmotion();
+        if (InSlowdownRange && !move.grounded)
+        {
+            timeManager.SlowDownFactor = timeManager.slowTimeScale;
+            Rain.pitch = 0.08f;
+        }
+        else if (!InSlowdownRange)
+        {
+            timeManager.SlowDownFactor = 1;
+            Rain.pitch = 1f;
+        }
+
+    }
+
     private void FixedUpdate()
     {
         InAttackRange = Physics2D.OverlapCircle(transform.position, attackRange, Player);
-        InSightRange = Physics2D.OverlapCircle(transform.position, sightRange, Player);
+        InSlowdownRange = Physics2D.OverlapCircle(SlowDown.position, slowdownRange, Player);
 
-        if (InAttackRange) {
-
+        if (InAttackRange)
+        {
             Attack();
             attacking = true;
         }
-        if(InSightRange && !InAttackRange) { 
-            Chase();
-            anim.SetBool("Attack", false);
-        }
-        if (!InSightRange)
-        {
-            float distance = Vector2.Distance(rb.position, Startpos);
-            DeBug = 5;
-            if(distance <= 5)
-            {
-                rb.velocity = Vector2.zero;
-                return;
-            }
-            else
-            {
-                MovementLogic();
-            }
-        }
+
     }
 
     void Attack()
     {
-        Chase();
+        MovementLogic();
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && !invince)
+        {
+            Damage();
+            StartCoroutine(invinsibleTime());
+        }
+    }
+
     void Damage()
     {
         Collider2D[] HitPlayer = Physics2D.OverlapCircleAll(transform.position, attackRange, Player);
         foreach (Collider2D PlayerHealth in HitPlayer)
         {
-            if(PlayerHealth.GetComponent<PlayerHealth>() != null)
+            if (PlayerHealth.GetComponent<PlayerHealth>() != null)
             {
                 PlayerHealth.GetComponent<PlayerHealth>().TakeDamage(Playerdamage);
             }
@@ -100,17 +105,17 @@ public class EAI : MonoBehaviour
     }
     void UpdatePath()
     {
-         if (seeker.IsDone())
-             seeker.StartPath(rb.position, target.position, OnPathComplete);
+            if (seeker.IsDone())
+                seeker.StartPath(rb.position, target.position, OnPathComplete);
     }
 
     void OnPathComplete(Path p)
     {
-         if(!p.error)
-         {
+        if (!p.error)
+        {
             path = p;
             currentWaypoint = 0;
-         }
+        }
     }
 
     void MovementLogic()
@@ -133,7 +138,7 @@ public class EAI : MonoBehaviour
         Vector2 dir = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
         Vector2 force = dir * speed * Time.deltaTime;
 
-        rb.velocity = new Vector2(force.x, rb.velocity.y);
+        rb.AddForce(force);
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
         if (distance < NextWaypointDistace)
@@ -143,37 +148,23 @@ public class EAI : MonoBehaviour
 
         if (rb.velocity.x >= 0.01f)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(1, 1, 1);
         }
         else if (rb.velocity.x <= -0.01f)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(-1, 1, 1);
         }
     }
-
-    // Update is called once per frame
-
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(transform.position, sightRange);
         Gizmos.DrawWireSphere(transform.position, attackRange);
-        Gizmos.DrawWireSphere(Startpos, 1f);
-        Gizmos.DrawWireSphere(Startpos, DeBug);
+        Gizmos.DrawWireSphere(SlowDown.position, slowdownRange);
     }
-
-    IEnumerator AnimTime()
+    IEnumerator invinsibleTime()
     {
-        anim.SetBool("Attack", true);
-        yield return new WaitForSeconds(AnimationTime);
-        if (Time.time >= nextAttackTime)
-        {
-            Debug.Log("hit");
-            Damage();
-            nextAttackTime = Time.time + 1 / attackRate;
-            attacking = false;
-            anim.SetBool("Attack", false);
-        }
-        rb.velocity = Vector3.zero;
+        rb.AddForce(transform.up * 3);
+        yield return new WaitForSeconds(0.5f);
+        invince = false;
     }
 }
