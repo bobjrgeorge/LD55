@@ -181,8 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ( he was a pretty bad super hero though. I mean look at him :/ ) ( Also,
-    the stars thing is a joke )
+  m_text: ( he was a pretty bad super hero though. I mean look at him :/ )
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2278d288b04663145a00f0bbe2a9b148, type: 2}
   m_sharedMaterial: {fileID: -1749643586657393440, guid: 2278d288b04663145a00f0bbe2a9b148, type: 2}
@@ -582,8 +581,8 @@ RectTransform:
   m_Children:
   - {fileID: 271723381}
   - {fileID: 66335873}
-  - {fileID: 122653401}
   - {fileID: 1661500718}
+  - {fileID: 122653401}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -605,6 +604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fade: {fileID: 122653398}
+  fader: {fileID: 122653397}
 --- !u!1 &271723380
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,7 +666,7 @@ MonoBehaviour:
   m_text: 'And so Billy found the scroll and became the best super hero!
 
     Thank
-    you for playing! Can we summon 5 humor stars?'
+    you for playing!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2278d288b04663145a00f0bbe2a9b148, type: 2}
   m_sharedMaterial: {fileID: -1749643586657393440, guid: 2278d288b04663145a00f0bbe2a9b148, type: 2}
@@ -1243,7 +1243,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.24100001, y: 0.5}
   m_AnchorMax: {x: 0.24100001, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.0000085831}
+  m_AnchoredPosition: {x: 0, y: -0}
   m_SizeDelta: {x: 334.9092, y: 86.7095}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1661500719

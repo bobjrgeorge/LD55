@@ -5,10 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class End : MonoBehaviour
 {
+
     public Animator fade;
+
+    public GameObject fader;
+
+    public void Start()
+    {
+        StartCoroutine(FadeDissable());
+    }
     public void BackToTitle()
     {
         StartCoroutine(SceneChange());
+        fader.SetActive(true);
+    }
+
+    IEnumerator FadeDissable()
+    {
+        yield return new WaitForSecondsRealtime(2);
+        fader.SetActive(false);
     }
 
     IEnumerator SceneChange()

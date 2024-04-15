@@ -242,7 +242,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 6
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -9514,6 +9514,10 @@ PrefabInstance:
       propertyPath: SummonSorter.Array.data[0]
       value: 
       objectReference: {fileID: 792868459}
+    - target: {fileID: 5507688039715185234, guid: 74f5d82e2e0c24c4e88e41181fc1d085, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -59787,6 +59791,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5133206556351860441, guid: cf2a52c8e4d22f04ea2bf16ce26542e4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6506511642715918561, guid: cf2a52c8e4d22f04ea2bf16ce26542e4, type: 3}
       propertyPath: m_Name
       value: Robber
@@ -60685,6 +60693,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 168190947}
+    - target: {fileID: 662336574942894270, guid: 7489e47463dfb5448ab0ba9151687fd1, type: 3}
+      propertyPath: speed
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 1090621412737628700, guid: 7489e47463dfb5448ab0ba9151687fd1, type: 3}
       propertyPath: input
       value: 
@@ -61337,6 +61349,10 @@ PrefabInstance:
     - target: {fileID: 3371348757289800116, guid: eadb8847f687a5a4c8df76da1b8c4c79, type: 3}
       propertyPath: PlayerTrans
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072771386209397488, guid: eadb8847f687a5a4c8df76da1b8c4c79, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4910228582287290375, guid: eadb8847f687a5a4c8df76da1b8c4c79, type: 3}
       propertyPath: cam
