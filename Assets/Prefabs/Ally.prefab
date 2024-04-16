@@ -288,11 +288,11 @@ MonoBehaviour:
   Enemy:
     serializedVersion: 2
     m_Bits: 128
-  damage: 10
+  damage: 25
   PlayerTrans: {fileID: 0}
   DeBug: 0
   Enemies: []
   ID: 
   summons: {fileID: 0}
   SummonSorter: []
-  health: 100
+  health: 2

@@ -16963,9 +16963,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7216177c3a94fa74f9ef6bee277e20d5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 626eedb1e887e1846b17dc953a5edfbe, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -22857,6 +22857,7 @@ MonoBehaviour:
   SummonTwo: 0
   canReset: 1
   goop: {fileID: 0}
+  goopAmmo: 0
   animator: {fileID: 0}
 --- !u!4 &9170990200840552675 stripped
 Transform:
