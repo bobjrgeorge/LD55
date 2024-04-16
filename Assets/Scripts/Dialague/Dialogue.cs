@@ -16,4 +16,6 @@ public class Dialogue
     public GameObject collider;
 
     public UnityEvent attackVL;
+
+    public UnityEvent music;
 }

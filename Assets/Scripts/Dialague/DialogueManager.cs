@@ -65,5 +65,12 @@ public class DialogueManager : MonoBehaviour
         FindObjectOfType<Interactable>().hasStarted = false;
         animator.SetBool("IsOpen", false);
         dialogue.attackVL.Invoke();
+        StartCoroutine(MusicStart(dialogue));
+    }
+
+    IEnumerator MusicStart(Dialogue dialogue)
+    {
+        yield return new WaitForSeconds(10);
+        dialogue.music.Invoke();
     }
 }

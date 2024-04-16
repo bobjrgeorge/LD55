@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class SisterFightEnd : MonoBehaviour
@@ -11,6 +12,10 @@ public class SisterFightEnd : MonoBehaviour
     public GameObject pow;
     public Animator sisterAnimator;
     bool hasPowed;
+
+    public UnityEvent bossMusic;
+
+    public UnityEvent trumpet;
 
     void Update()
     {
@@ -24,12 +29,15 @@ public class SisterFightEnd : MonoBehaviour
                 hasPowed = true;
                 StartCoroutine(Pow());
             }
+
+            bossMusic.Invoke();
         }
     }
 
     IEnumerator Pow()
     {
         pow.SetActive(true);
+        trumpet.Invoke();
         yield return new WaitForSeconds(1f);
         pow.SetActive(false);
     }
