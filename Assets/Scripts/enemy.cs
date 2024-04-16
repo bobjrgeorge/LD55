@@ -32,21 +32,12 @@ public class enemy : MonoBehaviour
 
     void Die()
     {
-        if (summon.pendingAdd != null)
+        if (Time.timeScale != 1)
         {
-            return;
+           return;
         }
-        else
-        {
-            if(SummonVarient == null)
-            {
-                Destroy(gameObject);
-                return;
-            }
-            summon.pendingAdd = SummonVarient.transform;
-        }
-        Time.timeScale = 1f;
         Destroy(gameObject);
+        summon.pendingAdd = SummonVarient.transform;
     }
 }
  
